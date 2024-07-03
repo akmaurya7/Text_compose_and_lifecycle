@@ -1,4 +1,5 @@
-Activity LifeCycle
+<span style="font-size: 24px;">Activity LifeCycle</span>
+
 
 onCreate(): this method is called when app is first launch
 onStart(): this method is called when activity or view start to visible
