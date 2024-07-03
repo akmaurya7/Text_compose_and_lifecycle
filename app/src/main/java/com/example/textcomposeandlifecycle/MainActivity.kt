@@ -3,6 +3,7 @@ package com.example.textcomposeandlifecycle
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.ReportDrawn
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
@@ -13,7 +14,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.LightGray
+import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -79,8 +83,19 @@ class MainActivity : ComponentActivity() {
                         fontSize = 32.sp
                     )
 
+                    //Brush for text Styling
+                    val gradientCol = listOf(Color.Red,Color.Blue,Color.Cyan,Color.Gray)
+                    Text(
+                        text = "Brush for Text Styling",
+                        style = TextStyle(
+                            brush = Brush.linearGradient(
+                                colors = gradientCol
+                            )
+                        ),
+                        fontSize = 32.sp
+                    )
 
-
+                    //
                 }
             }
         }
