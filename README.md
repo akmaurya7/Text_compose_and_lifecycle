@@ -1,7 +1,7 @@
 ## Activity LifeCycle
 
 
-onCreate(): this method is called when app is first launch
+###onCreate(): ####this method is called when app is first launch
 
 onStart(): this method is called when activity or view start to visible
 
