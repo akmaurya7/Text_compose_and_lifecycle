@@ -95,7 +95,24 @@ class MainActivity : ComponentActivity() {
                         fontSize = 32.sp
                     )
 
-                    //
+                    //Integration of Brush with multiple Line of Text
+                    val rainbowColor = listOf(Color.Red,Color.Blue,Color.Cyan,Color.Gray)
+                    Text(
+                        text = buildAnnotatedString {
+                            append("Do not allow people to dim your shine\n")
+                            withStyle(
+                                SpanStyle(
+                                    brush = Brush.linearGradient(
+                                        colors = rainbowColor
+                                    )
+                                )
+                            ) {
+                                append("because they are blinded.")
+                            }
+                            append("\nTell them to put some sunglasses on.")
+                        },
+                        fontSize = 20.sp
+                    )
                 }
             }
         }
