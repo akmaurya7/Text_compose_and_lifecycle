@@ -14,6 +14,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.textcomposeandlifecycle.ui.theme.TextComposeAndLifecycleTheme
@@ -29,10 +33,25 @@ class MainActivity : ComponentActivity() {
                     Text("Hello Team, how you all")
 
                     //Text with color red and font size 32
-                    Text("Hello Team, how you all", color = Color.Red, fontSize = 32.sp)
+                    Text("Text with color Red", color = Color.Red, fontSize = 32.sp)
 
+                    //Text with Text Style = Italic
+                    Text("Italic with font size 32sp", fontStyle = FontStyle.Italic, fontSize = 32.sp)
 
+                    //Use of font weight to make text bold
+                    Text("Bold Text", fontWeight = FontWeight.Bold, fontSize = 32.sp)
 
+                    //Text with shadow
+                    Text("Text with Red Shadow",
+                        style = TextStyle(
+                            fontSize = 32.sp,
+                            shadow = Shadow(
+                                color = Color.Red, blurRadius = 3f
+                            )
+                        )
+                    )
+
+                    //
                 }
             }
         }
