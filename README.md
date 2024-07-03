@@ -1,4 +1,4 @@
-<span style="font-size: 50px;">Activity LifeCycle</span>
+## Activity LifeCycle
 
 
 onCreate(): this method is called when app is first launch
