@@ -1,4 +1,4 @@
-## Activity LifeCycle
+# Activity LifeCycle
 
 
 ### onCreate(): this method is called when app is first launch
@@ -20,6 +20,6 @@
 
 
 
-## Text Styling
+# Text Styling ScreenShot
 
 ![Text_Styling_ScreenShot](https://github.com/akmaurya7/Text_compose_and_lifecycle/blob/master/ScreenShot/TextStyling.jpg)
