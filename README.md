@@ -2,12 +2,18 @@
 
 
 onCreate(): this method is called when app is first launch
+
 onStart(): this method is called when activity or view start to visible
+
 onResume(): when activity start interaction with the user
+
 onPause(): when our app go to the background
+
 onStop(): when our is not visible on the screen
-onRestart():when user again open the app after send it to the background, after the calling of this function app call  
+
+onRestart():when user again open the app after send it to the background, after the calling of this function app call 
             onStart() method.
+            
 onDestroy(): When app closes completly
 
 
