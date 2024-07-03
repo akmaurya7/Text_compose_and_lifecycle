@@ -8,7 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -26,6 +28,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.textcomposeandlifecycle.ui.theme.TextComposeAndLifecycleTheme
 
@@ -95,6 +98,8 @@ class MainActivity : ComponentActivity() {
                         fontSize = 32.sp
                     )
 
+                    Spacer(Modifier.height(32.dp))
+
                     //Integration of Brush with multiple Line of Text
                     val rainbowColor = listOf(Color.Red,Color.Blue,Color.Cyan,Color.Gray)
                     Text(
@@ -112,6 +117,34 @@ class MainActivity : ComponentActivity() {
                             append("\nTell them to put some sunglasses on.")
                         },
                         fontSize = 20.sp
+
+                    )
+
+                    Spacer(Modifier.height(32.dp))
+
+                    //Opacity in span of text
+                    val brush = Brush.linearGradient(colors = rainbowColor)
+
+                    Text(
+                        buildAnnotatedString {
+                            withStyle(
+                                SpanStyle(
+                                    //this alpha = .5f set the opacity to the 50%
+                                    brush = brush, alpha = .5f
+                                )
+                            ) {
+                                append("Try to ")
+                            }
+                            withStyle(
+                                SpanStyle(
+                                    //this alpha 1f set the opacity to the 100%
+                                    brush = brush, alpha = 1f
+                                )
+                            ) {
+                                append("Change Opacity")
+                            }
+                        },
+                        fontSize = 32.sp
 
                     )
                 }
