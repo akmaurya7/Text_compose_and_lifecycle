@@ -15,9 +15,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shadow
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.textcomposeandlifecycle.ui.theme.TextComposeAndLifecycleTheme
@@ -50,8 +53,34 @@ class MainActivity : ComponentActivity() {
                             )
                         )
                     )
+                    //Add multiple style to the text
+                    Text(
+                        buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color.Blue)) {
+                                append("F")
+                            }
+                            append("ont ")
 
-                    //
+                            withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = Color.Red)) {
+                                append("W")
+                            }
+                            append("ith ")
+
+                            withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, fontStyle = FontStyle.Italic)) {
+                                append("M")
+                            }
+                            append("ultiple ")
+
+                            withStyle(style = SpanStyle(fontWeight = FontWeight.Bold, color = Color.Green)) {
+                                append("S")
+                            }
+                            append("tyle")
+                        },
+                        fontSize = 32.sp
+                    )
+
+
+
                 }
             }
         }
