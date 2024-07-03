@@ -112,6 +112,7 @@ class MainActivity : ComponentActivity() {
                             append("\nTell them to put some sunglasses on.")
                         },
                         fontSize = 20.sp
+
                     )
                 }
             }
