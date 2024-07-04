@@ -22,4 +22,9 @@
 
 # Text Styling ScreenShot
 
+# My Project
+
+This is an image with specified width and height:
+
+<img src="[https://example.com/myimage.png](https://github.com/akmaurya7/Text_compose_and_lifecycle/blob/master/ScreenShot/TextStyling.jpg)" alt="My Image" width="500" height="300">
 ![Text_Styling_ScreenShot](https://github.com/akmaurya7/Text_compose_and_lifecycle/blob/master/ScreenShot/TextStyling.jpg)
