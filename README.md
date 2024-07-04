@@ -22,7 +22,6 @@
 
 # Text Styling ScreenShot
 
-# My Project
 
 
 ![Text_Styling_ScreenShot](https://github.com/akmaurya7/Text_compose_and_lifecycle/blob/master/ScreenShot/TextStyling.jpg)
